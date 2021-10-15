@@ -11,7 +11,7 @@ export default function Home() {
     "email": "traviswillmayer@gmail.com",
   })
   /* array of gratitudes */
-  const [gratitides, setGratitudes] = useState([])
+  const [gratitides, setGratitudes] = useState(["tacos", "blankets"])
   const [hasSubmittedToday, setSubmittedToday] = useState(false)
 
   const addGratitude = (entry) => {
