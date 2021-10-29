@@ -29,7 +29,7 @@ export default function Home() {
               let { error } = await supabase.auth.signOut()
               if (error) { console.log(error) }
             }}
-            className="text-pink-300">
+            className="text-pink-300 border-2 border-pink-300 rounded p-1 hover:border-blue-300 hover:text-blue-300">
               Logout
             </button>
             </div>
