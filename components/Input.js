@@ -26,10 +26,10 @@ export default function Input({handleSubmit}) {
                 
                 <div className = "eyesWrapper">
                     <div className = "eyesTitle">
-                        <h1>--- Eyes ---</h1>
+                        <h1>Eyes</h1>
                     </div>
                     <div className = "eyes">
-                        <ToolGroup buttons={["◕", "˘", "ↀ", " ͡⚆", "ꉺ", "￢","ට","⊙","ಠ ","ಥ"," ͡°","","","","","","","","","",""]} doOnClick={printButtonLabel}/>
+                        <ToolGroup buttons={["◕", "˘", "ↀ", " ͡⚆", "ꉺ", "￢","ට","⊙","ಠ ","ಥ"," ͡°","༎ຶ","⇀","↼","◔","≖","","","","",""]} doOnClick={printButtonLabel}/>
                     </div>
                 </div>
 
@@ -37,19 +37,19 @@ export default function Input({handleSubmit}) {
                 
                 <div className = "armsWrapper">
                     <div className = "armsTitle">
-                        <h1>--- Arms ---</h1>
+                        <h1>Arms</h1>
                     </div>
                     <div className= "arms" >
-                        <ToolGroup buttons={["╰", "ԅ", "و", "ﾉ", "ε","з", "☞","┗","┓","ヾ(",")ﾉ彡","ᕕ", "ᕗ"]} doOnClick={printButtonLabel}/>
+                        <ToolGroup buttons={["╰","╯", "ԅ", "و", "ﾉ", "ε","з", "☞","┗","┓","ヾ(",")ﾉ彡","ᕕ", "ᕗ"]} doOnClick={printButtonLabel}/>
                     </div>
                 </div>
 
                 <div className = "accWrapper">
                     <div className = "accTitle">
-                        <h1>--- Accessories ---</h1>
+                        <h1>Accessories</h1>
                     </div>
                     <div className="acc">
-                        <ToolGroup buttons={["One", "Two", "Three", "Four", "Five", "Six"]} doOnClick={printButtonLabel}/>
+                        <ToolGroup buttons={["♡", "˶", "✿", ".", "Five", "Six"]} doOnClick={printButtonLabel}/>
                     </div>
                 </div>
                 
@@ -57,10 +57,10 @@ export default function Input({handleSubmit}) {
                 
                 <div className = "facesWrapper">
                     <div className = "facesTitle">
-                        <h1>--- Faces ---</h1>
+                        <h1>Faces</h1>
                     </div>
                     <div className="faces">
-                        <ToolGroup buttons={[" ͜ʖ", "‿", "Ｕ", "ᴥ", "3", "△","﹏"]} doOnClick={printButtonLabel}/>
+                        <ToolGroup buttons={[" ͜ʖ", "‿", "Ｕ", "ᴥ", "3", "△","﹏","ᆺ","ᐛ","ཀ","𓋰"," ͟ʖ","‸"]} doOnClick={printButtonLabel}/>
                     </div>
                 </div>
                 
@@ -71,7 +71,7 @@ export default function Input({handleSubmit}) {
                         <h1>--- Miscellaneous ---</h1>
                     </div>
                     <div className="misc">
-                        <ToolGroup buttons={["তততততততততততত", "Two", "Three", "Four", "Five", "Six"]} doOnClick={printButtonLabel}/>
+                        <ToolGroup buttons={["ততততত", "𓆏", "❅", "Four", "Five", "Six"]} doOnClick={printButtonLabel}/>
                     </div>
                 </div>
                 
