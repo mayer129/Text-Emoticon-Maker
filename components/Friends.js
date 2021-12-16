@@ -15,6 +15,13 @@ export default function Friends() {
 
     const retreiveFriend = async (username) => {
         const { data, error } = await supabase
+        .from('favofites')
+        .select('entry')
+        .eq('id',username);
+        setDataType(data);
 
+        
     }
+
+    
 }
