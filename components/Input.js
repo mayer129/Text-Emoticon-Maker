@@ -29,7 +29,7 @@ export default function Input({handleSubmit}) {
                         <h1>Eyes</h1>
                     </div>
                     <div className = "eyes">
-                        <ToolGroup buttons={["◕", "˘", "ↀ", " ͡⚆", "ꉺ", "￢","ට","⊙","ಠ ","ಥ"," ͡°","༎ຶ","⇀","↼","◔","≖","","","","",""]} doOnClick={printButtonLabel}/>
+                        <ToolGroup buttons={["◕", "˘", "ↀ", " ͡⚆", "ꉺ", "￢","ට","⊙","ಠ ","ಥ"," ͡°","༎ຶ","⇀","↼","◔","≖","•̀","•́","-","•᷄","ಠಿ"]} doOnClick={printButtonLabel}/>
                     </div>
                 </div>
 
@@ -40,7 +40,7 @@ export default function Input({handleSubmit}) {
                         <h1>Arms</h1>
                     </div>
                     <div className= "arms" >
-                        <ToolGroup buttons={["╰","╯", "ԅ", "و", "ﾉ", "ε","з", "☞","┗","┓","ヾ(",")ﾉ彡","ᕕ", "ᕗ"]} doOnClick={printButtonLabel}/>
+                        <ToolGroup buttons={["╰","╯", "ԅ", "و", "ﾉ", "ε","з", "☞","┗","┓","ヾ(",")ﾉ彡","ᕕ", "ᕗ","ง","づ"]} doOnClick={printButtonLabel}/>
                     </div>
                 </div>
 
@@ -49,7 +49,7 @@ export default function Input({handleSubmit}) {
                         <h1>Accessories</h1>
                     </div>
                     <div className="acc">
-                        <ToolGroup buttons={["♡", "˶", "✿", ".", "Five", "Six"]} doOnClick={printButtonLabel}/>
+                        <ToolGroup buttons={["♡", "˶", "✿", ".", "ʕ", "ʔ","╬"]} doOnClick={printButtonLabel}/>
                     </div>
                 </div>
                 
@@ -60,7 +60,7 @@ export default function Input({handleSubmit}) {
                         <h1>Faces</h1>
                     </div>
                     <div className="faces">
-                        <ToolGroup buttons={[" ͜ʖ", "‿", "Ｕ", "ᴥ", "3", "△","﹏","ᆺ","ᐛ","ཀ","𓋰"," ͟ʖ","‸"]} doOnClick={printButtonLabel}/>
+                        <ToolGroup buttons={[" ͜ʖ", "‿", "Ｕ", "ᴥ", "3", "△","﹏","ᆺ","ᐛ","ཀ","𓋰"," ͟ʖ","‸","︿","Д","╭╮"]} doOnClick={printButtonLabel}/>
                     </div>
                 </div>
                 
@@ -71,7 +71,7 @@ export default function Input({handleSubmit}) {
                         <h1>--- Miscellaneous ---</h1>
                     </div>
                     <div className="misc">
-                        <ToolGroup buttons={["ততততত", "𓆏", "❅", "Four", "Five", "Six"]} doOnClick={printButtonLabel}/>
+                        <ToolGroup buttons={["ততততত", "𓆏", "❅", "✂", "ଘ", "ლ"," ҉","♪"]} doOnClick={printButtonLabel}/>
                     </div>
                 </div>
                 
@@ -277,3 +277,5 @@ export default function Input({handleSubmit}) {
         </>
     )
 }
+
+
