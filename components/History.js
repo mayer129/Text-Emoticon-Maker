@@ -1,8 +1,19 @@
-export default function History({gratitudes}) {
+import ToolGroup from "./ToolGroup"
+
+const printButtonLabel = (event) => {
+    console.log(event.target.name);
+    navigator.clipboard.writeText(event.target.name)
+}
+
+export default function History({favorites}) {
     return (
-        <p className="text-white text-2xl">Prevously, you were grateful for
-        <span className="font-bold">
-            {gratitudes.map(g => ' '+g.entry).toString()}</span>
-        </p>
+        <>
+            <p className="text-white text-2xl">Your favorites:
+            {/*<span className="font-bold">
+                {favorites.map(g => ' '+g.entry).toString()}</span>*/}
+            </p>
+        
+        <ToolGroup buttons={favorites.map(g => g.entry)} doOnClick={printButtonLabel}/>
+        </>
     )
 }

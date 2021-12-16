@@ -1,12 +1,9 @@
 import Head from 'next/head'
 import { Auth } from '@supabase/ui'
 import { useState } from 'react'
-import Greeting from '../components/Greeting'
-import History from '../components/History'
-import Input from '../components/Input'
-import GratitudeApp from '../components/GratitudeApp'
 
 import { supabase } from "../utils/supabaseClient"
+import EmoticonApp from '../components/EmoticonApp'
 
 export default function Home() {
   // gets the logged in user from Auth.UserContextProvider
@@ -17,14 +14,14 @@ export default function Home() {
   return ( /* gray background    min size is the height and width of screen */
     <div className="bg-gray-700 min-h-screen min-w-screen">
       <Head>
-        <title>Gratitude App</title>
+        <title>Text Emoticon Maker</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="container mx-auto max-w-prose ">
+      <main className="container mx-auto max-w-auto ">
         {
           user ? (<div>
-            <GratitudeApp user={user}/>
+            <EmoticonApp user={user}/>
             <button onClick={async () => {
               let { error } = await supabase.auth.signOut()
               if (error) { console.log(error) }
@@ -41,7 +38,7 @@ export default function Home() {
         }
       </main>
       <style jsx>{`
-
+      
       `}</style>
     </div>
 
