@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Auth } from '@supabase/ui'
 import { useState } from 'react'
+import Link from 'next/link'
 
 import { supabase } from "../utils/supabaseClient"
 import EmoticonApp from '../components/EmoticonApp'
@@ -22,6 +23,12 @@ export default function Home() {
         {
           user ? (<div>
             <EmoticonApp user={user}/>
+            <h1 className="title">
+              Friends{' '}
+              <Link href="Friends">
+                <a>here!</a>
+              </Link>
+            </h1>
             <button onClick={async () => {
               let { error } = await supabase.auth.signOut()
               if (error) { console.log(error) }

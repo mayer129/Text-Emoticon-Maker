@@ -22,6 +22,10 @@ export default function Friends() {
 
         
     }
-
+    return ( /* gray background    min size is the height and width of screen */
+        <div className="min-h-screen min-w-screen home">
+            <p>Hello there</p>
+        </div>
+    )
     
 }
