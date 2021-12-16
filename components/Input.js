@@ -115,16 +115,17 @@ export default function Input({handleSubmit}) {
 
             .eyes {
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                flex-wrap: nowrap;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
             }
 
             .arms {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                flex-wrap: nowrap;
+                flex-wrap: wrap;
             }
 
             .faces {
