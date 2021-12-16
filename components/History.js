@@ -7,6 +7,7 @@ const printButtonLabel = (event) => {
 
 export default function History({favorites}) {
     return (
+        <div>
         <>
             <p className="text-white text-2xl">Your favorites:
             {/*<span className="font-bold">
@@ -15,5 +16,15 @@ export default function History({favorites}) {
         
         <ToolGroup buttons={favorites.map(g => g.entry)} doOnClick={printButtonLabel}/>
         </>
+
+        <style jsx>{`
+            overflow: scroll;
+            padding: 30px;
+            border-radius: 9px;
+            box-shadow: inset 5px 5px 8px #bababa,
+        `}</style>
+        </div>
     )
+
+    
 }

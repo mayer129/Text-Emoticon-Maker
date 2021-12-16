@@ -63,8 +63,8 @@ export default function EmoticonApp({user}) {
     }
 
     return ( /* gray background    min size is the height and width of screen */
-      <div className="bg-gray-700 min-w-screen">
-        <main className="container mx-auto max-w-auto ">
+      <div className="min-w-screen" className = "background">
+        <main className="container mx-auto max-w-auto " className = "mainLayout">
             <div className="text-white text-6xl">
                 <h1>
                     Hello, <span className="text-pink-300">{user.email}</span>!
@@ -78,9 +78,11 @@ export default function EmoticonApp({user}) {
 
         </main>
         <style jsx>{`
+
   
         `}</style>
       </div>
   
     )
   }
+
