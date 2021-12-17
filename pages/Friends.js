@@ -44,10 +44,10 @@ export default function Friends() {
 
 
     return ( /* gray background    min size is the height and width of screen */
-        <div className="min-h-screen min-w-screen home">
+        <div className="min-h-screen min-w-screen friends">
             <>
               <Link href="/">
-                <button type="button" className="text-pink-300 border-2 border-pink-300 rounded p-1 hover:border-blue-300 hover:text-blue-300 logout">
+                <button type="button" className="text-pink-300 border-2 border-pink-300 rounded p-1 hover:border-blue-300 hover:text-blue-300 mt-8">
                   Home
                 </button>
               </Link>
@@ -65,6 +65,15 @@ export default function Friends() {
                 friendFavorites.length > 0 && 
                 <FriendHistory friendFavorites={friendFavorites}></FriendHistory>
                 }
+       
+            <style jsx>{`
+                .friends, .buttons {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+    
+            `}</style>
         </div>
 
     )
