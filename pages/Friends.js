@@ -27,7 +27,7 @@ export default function Friends() {
         if (!error) {
   
   
-            //setFriendFavorites(data)
+            setFriendFavorites(data)
             //setLoading(false)
           } else {
             console.log(error)
@@ -39,7 +39,6 @@ export default function Friends() {
     if(error) {
         return <p>{ error }</p>
       }
-
 
 
     return ( /* gray background    min size is the height and width of screen */
@@ -62,7 +61,7 @@ export default function Friends() {
                 </form>
                 {
                 friendFavorites.length > 0 && 
-                <FriendHistory favorites={friendFavorites}></FriendHistory>
+                <FriendHistory friendFavorites={friendFavorites}></FriendHistory>
                 }
         </div>
 

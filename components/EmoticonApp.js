@@ -25,6 +25,7 @@ export default function EmoticonApp({user}) {
       let { data: favorites, error } = await supabase
       .from('favorites')
       .select('entry, date_insert_ts')
+      .eq('id', user.id)
   
       if (!error) {
   
