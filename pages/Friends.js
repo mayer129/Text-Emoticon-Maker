@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from "../utils/supabaseClient"
 import ToolGroup from '../components/ToolGroup'
+import FriendHistory from '../components/FriendHistory'
 
 export default function Friends() {
     const[friendFavorites, setFriendFavorites] = useState([])
@@ -9,10 +10,6 @@ export default function Friends() {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
 
-    const printButtonLabel = (event) => {
-        console.log(event.target.name);
-        navigator.clipboard.writeText(event.target.name)
-    }
 
 
     let submitForm = e => {
@@ -52,8 +49,6 @@ export default function Friends() {
                         <button type="submit" className="bg-pink-300 rounded px-12 py-2 m-1 focus:bg-blue-300">Search</button>
                     </div>
                 </form>
-
-                <ToolGroup buttons={friendFavorites.map(g => g.entry)} doOnClick={printButtonLabel}/>
         </div>
 
     )
