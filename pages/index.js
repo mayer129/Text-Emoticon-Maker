@@ -23,17 +23,18 @@ export default function Home() {
         {
           user ? (<div>
             <EmoticonApp user={user}/>
-            <h1 className="title">
-              Friends{' '}
+            <>
               <Link href="Friends">
-                <a>here!</a>
+                <button type="button" className="rounded p-1 navigateButtons">
+                  Friend's Page
+                </button>
               </Link>
-            </h1>
+            </>
             <button onClick={async () => {
               let { error } = await supabase.auth.signOut()
               if (error) { console.log(error) }
             }}
-            className="text-pink-300 border-2 border-pink-300 rounded p-1 hover:border-blue-300 hover:text-blue-300 logout">
+            className="rounded p-1 navigateButtons">
               Logout
             </button>
             </div>
@@ -48,7 +49,7 @@ export default function Home() {
         .home{
           background:#e0e0e0;
         }
-        .logout {
+        .navigateButtons {
           box-shadow:inset 0px 1px 0px 0px #ffffff;
           background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
           background-color:#ffffff;
@@ -65,11 +66,11 @@ export default function Home() {
           text-shadow:0px 1px 0px #ffffff;
           margin-left:30px;
           }
-          .logout:hover {
+          .navigateButtons:hover {
             background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
             background-color:#f6f6f6;
           }
-          .logout:active {
+          .navigateButtons:active {
             position:relative;
             top:1px;
           }

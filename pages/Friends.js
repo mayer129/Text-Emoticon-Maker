@@ -44,9 +44,13 @@ export default function Friends() {
 
     return ( /* gray background    min size is the height and width of screen */
         <div className="min-h-screen min-w-screen home">
-            <Link href="/">
-                <a>Back to home</a>
-            </Link>
+            <>
+              <Link href="/">
+                <button type="button" className="text-pink-300 border-2 border-pink-300 rounded p-1 hover:border-blue-300 hover:text-blue-300 logout">
+                  Home
+                </button>
+              </Link>
+            </>
             <form onSubmit={submitForm} className="form ml-6">
                     <input type="text" value={value}
                         onChange={e => setValue(e.target.value)} 
