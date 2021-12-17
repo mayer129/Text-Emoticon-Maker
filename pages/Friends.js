@@ -49,6 +49,10 @@ export default function Friends() {
                         <button type="submit" className="bg-pink-300 rounded px-12 py-2 m-1 focus:bg-blue-300">Search</button>
                     </div>
                 </form>
+                {
+                friendFavorites.length > 0 && 
+                <FriendHistory favorites={favorites}></FriendHistory>
+                }
         </div>
 
     )
