@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react'
 import { supabase } from "../utils/supabaseClient"
 import ToolGroup from '../components/ToolGroup'
 import FriendHistory from '../components/FriendHistory'
+import Link from 'next/link'
 
 export default function Friends() {
     const[friendFavorites, setFriendFavorites] = useState([])
     const[value, setValue] = useState("")
 
-    const [loading, setLoading] = useState(true)
+    //const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
 
 
@@ -22,24 +23,30 @@ export default function Friends() {
         .from('favorites')
         .select('entry')
         .eq('id',username);
-        console.log("here")
         console.log(data)
         if (!error) {
   
   
-            setFriendFavorites(data)
-            setLoading(false)
+            //setFriendFavorites(data)
+            //setLoading(false)
           } else {
             console.log(error)
-            setLoading(false)
+            //setLoading(false)
             setError(error)
-          }
-
-        
+          } 
     }
+
+    if(error) {
+        return <p>{ error }</p>
+      }
+
+
+
     return ( /* gray background    min size is the height and width of screen */
         <div className="min-h-screen min-w-screen home">
-            <p>Hello there</p>
+            <Link href="/">
+                <a>Back to home</a>
+            </Link>
             <form onSubmit={submitForm} className="form ml-6">
                     <input type="text" value={value}
                         onChange={e => setValue(e.target.value)} 
@@ -51,7 +58,7 @@ export default function Friends() {
                 </form>
                 {
                 friendFavorites.length > 0 && 
-                <FriendHistory favorites={favorites}></FriendHistory>
+                <FriendHistory favorites={friendFavorites}></FriendHistory>
                 }
         </div>
 

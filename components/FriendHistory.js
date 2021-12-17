@@ -5,7 +5,7 @@ const printButtonLabel = (event) => {
     navigator.clipboard.writeText(event.target.name)
 }
 
-export default function FriendHistory({FriendFavorites}) {
+export default function FriendHistory({friendFavorites}) {
     return (
         <div className= "favorites">
         <>
@@ -14,7 +14,7 @@ export default function FriendHistory({FriendFavorites}) {
                 {favorites.map(g => ' '+g.entry).toString()}</span>*/}
             </p>
             
-            <ToolGroup buttons={FriendFavorites.map(g => g.entry)} doOnClick={printButtonLabel}/>
+        <ToolGroup buttons={friendFavorites.map(g => g.entry)} doOnClick={printButtonLabel}/>
         </>
 
         <style jsx>{`
