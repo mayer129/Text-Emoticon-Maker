@@ -4,7 +4,7 @@ import ToolGroup from '../components/ToolGroup'
 import FriendHistory from '../components/FriendHistory'
 import Link from 'next/link'
 
-export default function Friends() {
+export default function Friends(user) {
     const[friendFavorites, setFriendFavorites] = useState([])
     const[value, setValue] = useState("")
 
@@ -22,19 +22,14 @@ export default function Friends() {
         const { data, error } = await supabase
         .from('favorites','user')
         .select('entry')
-        .eq('id',username);
+        .eq('user.',username);
         console.log(data)
         if (!error) {
-  
-  
             setFriendFavorites(data)
             //setLoading(false)
           } else {
             console.log(error)
             //setLoading(false)
-            
-            
-            
           } 
     }
 
