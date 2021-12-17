@@ -20,7 +20,7 @@ export default function Friends() {
 
     const retreiveFriend = async (username) => {
         const { data, error } = await supabase
-        .from('favorites')
+        .from('favorites','user')
         .select('entry')
         .eq('id',username);
         console.log(data)
@@ -32,7 +32,9 @@ export default function Friends() {
           } else {
             console.log(error)
             //setLoading(false)
-            setError(error)
+            
+            
+            
           } 
     }
 
